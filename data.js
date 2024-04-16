@@ -7,7 +7,8 @@ const data = `
             "link": "product.html",
             "desc": "Known for her sculptural takes on traditional tailoring, Australian",
             "price": "$52.00",
-            "cart": "img/Add to cart.svg"
+            "cart": "img/Add to cart.svg",
+            "ID": "1"
         },
         {
             "src": "img/product6.jpg",
@@ -16,7 +17,8 @@ const data = `
             "link": "product.html",
             "desc": "Known for her sculptural takes on traditional tailoring, Australian",
             "price": "$52.00",
-            "cart": "img/Add to cart.svg"
+            "cart": "img/Add to cart.svg",
+            "ID": "2"
         },
         {
             "src": "img/product3.jpg",
@@ -25,7 +27,8 @@ const data = `
             "link": "product.html",
             "desc": "Known for her sculptural takes on traditional tailoring, Australian",
             "price": "$52.00",
-            "cart": "img/Add to cart.svg"
+            "cart": "img/Add to cart.svg",
+            "ID": "3"
         },
         {
             "src": "img/product4.jpg",
@@ -34,7 +37,8 @@ const data = `
             "link": "product.html",
             "desc": "Known for her sculptural takes on traditional tailoring, Australian",
             "price": "$52.00",
-            "cart": "img/Add to cart.svg"
+            "cart": "img/Add to cart.svg",
+            "ID": "4"
         },
         {
             "src": "img/product5.jpg",
@@ -43,7 +47,8 @@ const data = `
             "link": "product.html",
             "desc": "Known for her sculptural takes on traditional tailoring, Australian",
             "price": "$52.00",
-            "cart": "img/Add to cart.svg"
+            "cart": "img/Add to cart.svg",
+            "ID": "5"
         },
         {
             "src": "img/product6.jpg",
@@ -52,7 +57,8 @@ const data = `
             "link": "product.html",
             "desc": "Known for her sculptural takes on traditional tailoring, Australian",
             "price": "$52.00",
-            "cart": "img/Add to cart.svg"
+            "cart": "img/Add to cart.svg",
+            "ID": "6"
         }
     ] 
 `

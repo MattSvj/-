@@ -111,6 +111,12 @@
                 </div>
             </div>
         </section>
+
+        
+        <div class="cart-items">
+            
+        </div>
+
         <section class="product-box center">
             
             <h2 class="product-box__heading">Fetured Items</h2>
@@ -197,13 +203,71 @@
         productImg.setAttribute('alt', ProductsData.alt);
         productImg.src = ProductsData.src;
 
-
         const productContent = document.createElement('div');
         productContent.classList.add('product__content');
 
         const productLink = document.createElement('a');
         productLink.href = ProductsData.link;
         productLink.textContent = ProductsData.name;
+
+        var cartItems = document.getElementById('cart-items');
+
+        const addToCart = document.createElement('button');
+        const addToCartImg = document.createElement('img');
+        addToCartImg.src = ProductsData.cart;
+        addToCart.appendChild(addToCartImg);
+        addToCart.classList.add('product__add');
+
+        // Добавляем обработчик события при нажатии на кнопку "Add to Cart"
+        addToCart.addEventListener('click', function() {
+            const cartItems = document.querySelector('.cart-items');
+            const productEl = document.createElement('div');
+            productEl.classList.add('product');
+
+            const productImg = document.createElement('img');
+            productImg.classList.add('product__img');
+        
+            productImg.setAttribute('alt', ProductsData.alt);
+            productImg.src = ProductsData.src;
+
+            const productContent = document.createElement('div');
+            productContent.classList.add('product__content');
+
+            const productLink = document.createElement('a');
+            productLink.href = ProductsData.link;
+            productLink.textContent = ProductsData.name;
+
+            const productText = document.createElement('p');
+            productText.classList.add('product__text')
+            productText.textContent = ProductsData.desc;
+
+            const productPrice = document.createElement('p');
+            productPrice.classList.add('product__price')
+            productPrice.textContent = ProductsData.price;
+
+            const deleteFromCart = document.createElement('button');
+            const deleteFromCartImg = document.createElement('img');
+            deleteFromCartImg.src = "img/x.svg";
+            deleteFromCart.appendChild(deleteFromCartImg);
+            deleteFromCart.classList.add('delete__button')
+
+            productContent.appendChild(productLink);
+            productContent.appendChild(productText);
+            productContent.appendChild(productPrice);
+            productEl.appendChild(deleteFromCart);
+            productEl.appendChild(productImg);
+            productEl.appendChild(productContent);
+            cartItems.appendChild(productEl);
+    
+        // Получаем кнопку удаления товара и добавляем обработчик события для удаления товара
+        var deleteItemBtn = productEl.querySelector('.delete__button');
+        deleteItemBtn.addEventListener('click', function() {
+            productEl.remove();
+            if (cartItems.childElementCount === 0) {
+                cartItems.style.display = 'none';
+            }
+        });
+        });
 
         const productText = document.createElement('p');
         productText.classList.add('product__text')
@@ -218,6 +282,7 @@
         productContent.appendChild(productPrice);
         productEl.appendChild(productImg);
         productEl.appendChild(productContent);
+        productEl.appendChild(addToCart);
         productBox.appendChild(productEl);
         });
 

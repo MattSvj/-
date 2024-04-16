@@ -342,6 +342,19 @@ img {
   gap: 30px;
 }
 
+.cart-items {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 360px);
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 48px;
+}
+
+.delete__button {
+    margin-left: 95%;
+}
+
 .product {
   position: relative;
 }
@@ -362,6 +375,7 @@ img {
 
 
 .product__add {
+  background: rgba(255, 255, 255, 0);
   position: absolute;
   top: 188px;
   left: 111px;
